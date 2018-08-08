@@ -43,8 +43,8 @@ python arif.py
 
 Credit By@ arifistifik
 ------
-- `Follow My Instagram : arifistifik`
-- `Add My ID LINE : (arifistifik) '
+- `Follow My Instagram : max_sy`
+- `Add My ID LINE : self_js'
 - 'ID Smule : ARIF_MH'
 
 Thx To :
