@@ -30,7 +30,7 @@ pip3 install googletrans
 
 git clone https://github.com/0954517662/py3
 
-cd Pp3
+cd Py3
 
 python3 sb.py
 
