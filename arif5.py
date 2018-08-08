@@ -443,7 +443,7 @@ def lineBot(op):
             if settings["autoAdd"] == True:
                 arif.sendMessage(op.param1, "Halo {} terimakasih telah menambahkan saya sebagai teman :D".format(str(arif.getContact(op.param1).displayName)))
                 arif.blockContact(op.param1)
-	if op.type == 13:
+        if op.type == 13:
             print ("[ 13 ] NOTIFIED INVITE INTO GROUP")
             group = arif.getGroup(op.param1)
             contact = arif.getContact(op.param2)
