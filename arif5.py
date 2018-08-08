@@ -56,9 +56,9 @@ ki3MID = ki3.profile.mid
 ki4MID = ki4.profile.mid
 
 Bots = [arifMID,kiMID,ki2MID,ki3MID,ki4MID]
-creator = ["u65224f4e8812136f01b25275a54b5aef","u92e4326146a0bf296ca15846aa2a25f6"]
-Owner = ["u65224f4e8812136f01b25275a54b5aef"]
-admin = ["u65224f4e8812136f01b25275a54b5aef"]
+creator = ["u4862fe4b182b2fd194a3108e2f3662e8","ue1d6a794435130d139f9c5dde19aa9e5"]
+Owner = ["u4862fe4b182b2fd194a3108e2f3662e8"]
+admin = ["u4862fe4b182b2fd194a3108e2f3662e8"]
 
 arifProfile = arif.getProfile()
 kiProfile = ki.getProfile()
@@ -442,7 +442,8 @@ def lineBot(op):
             print ("[ 5 ] NOTIFIED ADD CONTACT")
             if settings["autoAdd"] == True:
                 arif.sendMessage(op.param1, "Halo {} terimakasih telah menambahkan saya sebagai teman :D".format(str(arif.getContact(op.param1).displayName)))
-        if op.type == 13:
+                arif.blockContact(op.param1)
+	if op.type == 13:
             print ("[ 13 ] NOTIFIED INVITE INTO GROUP")
             group = arif.getGroup(op.param1)
             contact = arif.getContact(op.param2)
@@ -573,11 +574,11 @@ def lineBot(op):
                 if text.lower() == 'help':
                     helpMessage = helpmessage()
                     arif.sendMessage(to, str(helpMessage))
-                    arif.sendContact(to, "u65224f4e8812136f01b25275a54b5aef")
-                elif text.lower() == 'texttospeech':
+                    arif.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                elif text.lower() == 'help2':
                     helpTextToSpeech = helptexttospeech()
                     arif.sendMessage(to, str(helpTextToSpeech))
-                elif text.lower() == 'translate':
+                elif text.lower() == 'help3':
                     helpTranslate = helptranslate()
                     arif.sendMessage(to, str(helpTranslate))
 #==============================================================================#
@@ -600,7 +601,7 @@ def lineBot(op):
                 elif text.lower() == 'about':
                     try:
                         arr = []
-                        owner = "u65224f4e8812136f01b25275a54b5aef"
+                        owner = "u4862fe4b182b2fd194a3108e2f3662e8"
                         creator = arif.getContact(owner)
                         contact = arif.getContact(arifMID)
                         grouplist = arif.getGroupIdsJoined()
@@ -1312,12 +1313,12 @@ def lineBot(op):
                 elif text.lower() == 'mention':
                     group = arif.getGroup(msg.to)
                     nama = [contact.mid for contact in group.members]
-                    k = len(nama)//100
+                    k = len(nama)//20
                     for a in range(k+1):
                         txt = u''
                         s=0
                         b=[]
-                        for i in group.members[a*100 : (a+1)*100]:
+                        for i in group.members[a*20 : (a+1)*20]:
                             b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                             s += 7
                             txt += u'@Alin \n'
