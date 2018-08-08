@@ -34,5 +34,5 @@ Credit By@ arifistifik
 
 Thx To :
 ------
-- `LINE-TCR TEAM`
-- `ALL USER`
+-【さัএπัஞ✵ບิथℓℓҨतΩ】
+- ALL USER
