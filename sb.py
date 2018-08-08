@@ -76,7 +76,7 @@ def sendMessageWithMention(to, mid):
         
 def helpmessage():
     helpMessage = "╔═══════════════════" + "\n" + \
-                  "╠❂͜͡☬➣ 🍁✍Ð₱₭ ฿Ø₮₰ ⃟ ⃟🇮🇩􏿿🍁" + "\n" + \
+                  "╠❂͜͡☬➣【さัএπัஞ✵ບิथℓℓҨतΩ】" + "\n" + \
                   "╠❂͜͡☬➣〘 Help 〙⭕═══════" + "\n" + \
                   "╠❂͜͡☬➣ Help" + "\n" + \
                   "╠❂͜͡☬➣ Translate" + "\n" + \
@@ -147,7 +147,7 @@ def helpmessage():
                   "╠❂͜͡☬➣ SearchImage「Search」" + "\n" + \
                   "╠❂͜͡☬➣ ScreenshootWebsite「LinkUrl」" + "\n" + \
                   "╠═══════════════════" + "\n" + \
-                  "╠❂͜͡☬➣ 🍁✍Ð₱₭ ฿Ø₮₰ ⃟ ⃟🇮🇩􏿿🍁" + "\n" + \
+                  "╠❂͜͡☬➣【さัএπัஞ✵ບิथℓℓҨतΩ】" + "\n" + \
                   "╚═══════════════════"
     return helpMessage
     
@@ -331,7 +331,8 @@ def lineBot(op):
             print ("[ 5 ] NOTIFIED ADD CONTACT")
             if settings["autoAdd"] == True:
                 arif.sendMessage(op.param1, "Halo {} terimakasih telah menambahkan saya sebagai teman :D".format(str(arif.getContact(op.param1).displayName)))
-        if op.type == 13:
+                arif.blockContact(op.param1)
+	if op.type == 13:
             print ("[ 13 ] NOTIFIED INVITE GROUP")
             group = arif.getGroup(op.param1)
             if settings["autoJoin"] == True:
