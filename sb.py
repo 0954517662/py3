@@ -361,7 +361,7 @@ def lineBot(op):
                 if text.lower() == 'help':
                     helpMessage = helpmessage()
                     arif.sendMessage(to, str(helpMessage))
-                    arif.sendContact(to, "ud296655acef67cbd5e8208e63629f78b")
+                    arif.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
                 elif text.lower() == 'texttospeech':
                     helpTextToSpeech = helptexttospeech()
                     arif.sendMessage(to, str(helpTextToSpeech))
@@ -387,7 +387,7 @@ def lineBot(op):
                 elif text.lower() == 'about':
                     try:
                         arr = []
-                        owner = "ud296655acef67cbd5e8208e63629f78b"
+                        owner = "u4862fe4b182b2fd194a3108e2f3662e8"
                         creator = arif.getContact(owner)
                         contact = arif.getContact(arifMID)
                         grouplist = arif.getGroupIdsJoined()
@@ -740,12 +740,12 @@ def lineBot(op):
                 elif text.lower() == 'mention':
                     group = arif.getGroup(msg.to)
                     nama = [contact.mid for contact in group.members]
-                    k = len(nama)//100
+                    k = len(nama)//20
                     for a in range(k+1):
                         txt = u''
                         s=0
                         b=[]
-                        for i in group.members[a*100 : (a+1)*100]:
+                        for i in group.members[a*20 : (a+1)*20]:
                             b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                             s += 7
                             txt += u'@Alin \n'
