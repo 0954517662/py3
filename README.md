@@ -32,7 +32,7 @@ git clone https://github.com/0954517662/py3
 
 cd Pp3
 
-arif.py
+python3 sb.py
 
 Cara Menjalankan Bot Kembali :
 ------
